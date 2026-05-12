@@ -16,7 +16,6 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import fitxLogo from "@/assets/fitx.png";
 import heroImg from "@/assets/hero.jpeg";
 import img3 from "@/assets/img3.jpeg";
 import img2 from "@/assets/img2.jpeg";
@@ -53,9 +52,9 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#222] bg-[#0A0A0A]/95 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
+      <div className="mx-auto flex h-32 max-w-7xl items-center justify-between px-4 md:px-8">
         <a href="#home" className="flex items-center">
-          <img src={fitxLogo} alt="FitX Gym" className="h-10 w-auto" />
+          <img src="/fitx.png" alt="FitX Gym" className="h-24 w-auto" />
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {NAV.map((n) => (
@@ -85,7 +84,7 @@ function Navbar() {
       {open && (
         <div className="fixed inset-0 z-50 bg-black/95 md:hidden">
           <div className="flex items-center justify-between px-4 py-4 border-b border-[#222]">
-            <img src={fitxLogo} alt="FitX" className="h-10" />
+            <img src="/fitx.png" alt="FitX" className="h-20" />
             <button onClick={() => setOpen(false)} aria-label="Close">
               <X size={28} className="text-white" />
             </button>
@@ -119,7 +118,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[calc(100vh-4rem)] w-full items-center overflow-hidden"
+      className="relative flex min-h-[calc(100vh-8rem)] w-full items-center overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.88) 35%, rgba(139,0,0,0.45) 100%), url(${heroImg})`,
         backgroundSize: "cover",
@@ -561,7 +560,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-10 md:px-12">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           <div className="flex items-center gap-4">
-            <img src={fitxLogo} alt="FitX" className="h-10" />
+            <img src="/fitx.png" alt="FitX" className="h-32" />
             <span className="font-label text-[13px] uppercase tracking-[0.2em] text-accent-yellow">
               Train • Strength / Fitness
             </span>
