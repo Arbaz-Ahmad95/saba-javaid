@@ -74,6 +74,7 @@ export default {
       return await normalizeCatastrophicSsrResponse(response);
     } catch (error) {
       console.error(error);
+      console.log("errr");
       return brandedErrorResponse();
     }
   },
